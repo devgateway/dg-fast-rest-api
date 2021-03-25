@@ -10,7 +10,7 @@
     </parent>
 
     <groupId>org.devgateway</groupId>
-    <artifactId>dg-fast-api-commons</artifactId>
+    <artifactId>fast-api-commons</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>commons</name>
     <description>Commons code for creating fast APIs</description>
