@@ -1,0 +1,52 @@
+version: '3'
+services:
+  example:
+    build:
+      context: ./
+      dockerfile: ./example-impl/Dockerfile
+    networks:
+      - backend
+    depends_on:
+      - postgres
+    volumes:
+      - ./files/:/opt/files
+    logging:
+      driver: journald
+
+  postgres:
+    build:
+      context: ./postgres
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+    networks:
+      - backend
+    env_file:
+      - env
+    restart: unless-stopped
+    logging:
+      driver: journald
+
+  nginx:
+    image: nginx:alpine
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/example.conf:/etc/nginx/conf.d/example.conf:ro
+    depends_on:
+      - example
+    networks:
+      - backend
+      - frontend
+    ports:
+      - 80:80
+      - 443:443
+    logging:
+      driver: journald
+
+
+networks:
+  backend:
+  frontend:
+    driver: bridge
+
+volumes:
+  ui:

@@ -1,6 +1,5 @@
 package org.devgateway.fast.api.commons.domain.categories;
 
-
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import org.devgateway.fast.api.commons.domain.LocaleText;
 import org.devgateway.fast.api.commons.pojo.LocaleTextSerializer;
@@ -12,6 +11,7 @@ import java.util.List;
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name = "type")
+
 public abstract class Category {
 
     @Id
@@ -69,6 +69,7 @@ public abstract class Category {
     @OneToMany(targetEntity = LocaleText.class)
 
     private List<LocaleText> descriptions;
+
     public Long getId() {
         return id;
     }

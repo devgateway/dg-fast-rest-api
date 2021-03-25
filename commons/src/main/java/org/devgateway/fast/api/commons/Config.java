@@ -14,9 +14,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @Configuration
 @EnableTransactionManagement
 @EnableSwagger2
-@EntityScan(basePackages = "org.devgateway.tcdi.commons.domain")
-@EnableJpaRepositories(basePackages = "org.devgateway.tcdi.commons.repositories")
-@ComponentScan(basePackages = "org.devgateway.tcdi")
+@EntityScan(basePackages = "org.devgateway.fast.api.commons.domain")
+@EnableJpaRepositories(basePackages = "org.devgateway.fast.api.commons.repositories")
+@ComponentScan(basePackages = "org.devgateway.fast.api.commons")
 //@EnableDiscoveryClient
 @PropertySource("classpath:common.properties")
 @EnableCaching

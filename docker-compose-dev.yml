@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+
+
+  postgres:
+    build:
+      context: ./postgres
+    volumes:
+      - ./data/postgresql:/var/lib/postgresql/data
+    networks:
+      - frontend #for dev purpose we use a bridged network
+    env_file:
+      - env
+    restart: unless-stopped
+    logging:
+      driver: journald
+    ports:
+      - 5442:5432
+
+
+networks:
+  frontend:
+    driver: bridge
+
+volumes:
+  ui:

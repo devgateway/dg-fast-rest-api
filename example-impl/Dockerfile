@@ -1,6 +1,6 @@
 #this file should be ran from API root folder
 FROM maven:3.6-jdk-11-slim AS compiler
-WORKDIR /opt/tcdi
+WORKDIR /opt/fast-api
 COPY ./pom.xml ./
 COPY ./commons/ ./commons
 
@@ -11,7 +11,7 @@ RUN mvn -B  clean compile package -DskipTests
 
 FROM openjdk:11-jdk-slim
 WORKDIR /opt/fast-api
-COPY --from=compiler /opt/fast-apu/example-impl/target/*.jar .
+COPY --from=compiler /opt/fast-api/example-impl/target/fast-api-example-0.0.1-SNAPSHOT.jar .
 RUN date >/build-date.txt
 EXPOSE 8082
-ENTRYPOINT ["java", "-jar", "./prevalence-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "./fast-api-example-0.0.1-SNAPSHOT.jar"]

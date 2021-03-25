@@ -2,6 +2,7 @@ package org.devgateway.fast.api.example.io;
 
 import org.devgateway.fast.api.commons.domain.categories.*;
 import org.devgateway.fast.api.commons.services.CategoryService;
+import org.devgateway.fast.api.example.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Component;
@@ -9,7 +10,6 @@ import org.springframework.stereotype.Component;
 import java.util.Arrays;
 import java.util.List;
 
-;
 
 @Component
 public class DataUtils {

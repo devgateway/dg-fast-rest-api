@@ -1,10 +1,10 @@
 package org.devgateway.fast.api.example.io;
 
 import org.devgateway.fast.api.example.domain.Survey;
-import org.devgateway.fast.api.commons.domain.categories.Area;
-import org.devgateway.fast.api.commons.domain.categories.EducationLevel;
-import org.devgateway.fast.api.commons.domain.categories.Gender;
-import org.devgateway.fast.api.commons.domain.categories.Race;
+import org.devgateway.fast.api.example.domain.Area;
+import org.devgateway.fast.api.example.domain.EducationLevel;
+import org.devgateway.fast.api.example.domain.Gender;
+import org.devgateway.fast.api.example.domain.Race;
 import org.devgateway.fast.api.commons.io.BaseCSVImporter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

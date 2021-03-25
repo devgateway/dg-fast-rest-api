@@ -2,7 +2,6 @@ package org.devgateway.fast.api.example.domain;
 
 import org.devgateway.fast.api.commons.domain.Dimension;
 import org.devgateway.fast.api.commons.domain.Filtrable;
-import org.devgateway.fast.api.commons.domain.categories.*;
 
 import javax.persistence.*;
 

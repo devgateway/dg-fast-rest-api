@@ -19,39 +19,39 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan
 @SpringBootApplication
 @Import(Config.class)
-public class Prevalence implements CommandLineRunner {
+public class Main implements CommandLineRunner {
 
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
     private final CSV2Prevalence csv2Prevalence;
 
-    @Value("${tcdi.startup.import}")
+    @Value("${fast.api.startup.import}")
     private Boolean startupImport = false;
 
-    @Value("${tcdi.ckan.host}")
+    @Value("${fast.api.ckan.host}")
     private String host = "";
 
 
-    @Value("${tcdi.ckan.uri}")
+    @Value("${fast.api.ckan.uri}")
     private String uri = "/api/3/action/datastore_search?limit=50&resource_id=";
 
-    @Value("${tcdi.ckan.resource}")
+    @Value("${fast.api.ckan.resource}")
     private String resource = "";
 
-    @Value("${tcdi.prevalence.file}")
+    @Value("${fast.api.example.file}")
     String file;
 
 
-    @Value("${tcdi.date.format}")
+    @Value("${fast.api.date.format}")
     String format;
 
-    public Prevalence(CSV2Prevalence csv2Prevalence) {
+    public Main(CSV2Prevalence csv2Prevalence) {
         this.csv2Prevalence = csv2Prevalence;
     }
 
 
     public static void main(final String[] args) {
-        SpringApplication.run(Prevalence.class, args);
+        SpringApplication.run(Main.class, args);
     }
 
     @Override

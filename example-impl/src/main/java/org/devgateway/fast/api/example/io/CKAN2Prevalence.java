@@ -1,7 +1,6 @@
 package org.devgateway.fast.api.example.io;
 
-import org.devgateway.fast.api.commons.domain.categories.*;
-import org.devgateway.fast.api.example.domain.Survey;
+import org.devgateway.fast.api.example.domain.*;
 import org.devgateway.fast.api.commons.io.BaseCKANImporter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
