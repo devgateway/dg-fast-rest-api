@@ -19,6 +19,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EntityScan
 @SpringBootApplication
 @Import(Config.class)
+/**
+ * @author Sebastian Dimunzio
+ */
 public class Main implements CommandLineRunner {
 
 

@@ -27,7 +27,9 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.stream.Collectors;
-
+/**
+ * @author Sebastian Dimunzio
+ */
 @Service
 public class PrevalenceSurveyService {
 

@@ -12,7 +12,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Locale;
 
+/**
+ * @author Sebastian Dimunzio
+ */
 public abstract class BaseCSVImporter<T> extends BaseImport<T, String[]> {
+
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
 

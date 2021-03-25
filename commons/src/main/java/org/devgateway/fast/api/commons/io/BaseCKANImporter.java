@@ -12,8 +12,10 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.util.HashMap;
 
-
-public abstract class BaseCKANImporter<T> extends BaseImport<T,HashMap> {
+/**
+ * @author Sebastian Dimunzio
+ */
+public abstract class BaseCKANImporter<T> extends BaseImport<T, HashMap> {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
     protected ObjectMapper mapper = new ObjectMapper();

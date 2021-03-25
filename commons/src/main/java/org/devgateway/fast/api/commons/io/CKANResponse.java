@@ -1,7 +1,9 @@
 package org.devgateway.fast.api.commons.io;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-
+/**
+ * @author Sebastian Dimunzio
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CKANResponse {
 

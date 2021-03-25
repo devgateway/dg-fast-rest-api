@@ -4,7 +4,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import java.util.HashMap;
 import java.util.List;
-
+/**
+ * @author Sebastian Dimunzio
+ */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @SuppressWarnings("checkstyle:MemberName")
 public class CKANResults {
@@ -15,7 +17,7 @@ public class CKANResults {
     private Integer limit;
     private Integer total;
     private Integer offset;
-   private HashMap _links;
+    private HashMap _links;
 
 
     List<HashMap> records;

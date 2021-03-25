@@ -26,7 +26,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-
+/**
+ * @author Sebastian Dimunzio
+ */
 public abstract class SurveyServiceBase<R extends JpaRepository, Q extends EntityPathBase, S> {
 
     private final Logger logger = LoggerFactory.getLogger(this.getClass());

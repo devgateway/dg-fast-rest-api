@@ -9,12 +9,14 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 
+/**
+ * @author Sebastian Dimunzio
+ */
 @Transactional
 public abstract class BaseImport<T, R> {
 
 
-
-    protected void beforeStart(){
+    protected void beforeStart() {
         clean();
         init();
     }
@@ -107,7 +109,7 @@ public abstract class BaseImport<T, R> {
 
 
     public void save(T record) {
-         entityManager.persist(record);
+        entityManager.persist(record);
     }
 
 }

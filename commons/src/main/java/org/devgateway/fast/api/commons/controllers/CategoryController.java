@@ -24,7 +24,7 @@ public class CategoryController {
     @GetMapping("/categories")
     public ResponseEntity<Collection<CategoryResponse>> getCategories() {
 
-      List<Category> categories = categoryService.getAllCategories();
+        List<Category> categories = categoryService.getAllCategories();
 
         HashMap<String, CategoryResponse> categoriesMap = new HashMap<>();
 

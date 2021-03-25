@@ -11,6 +11,9 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 @Service
+/**
+ * @author Sebastian Dimunzio
+ */
 public class CSV2Prevalence extends BaseCSVImporter<Survey> {
     private final Logger logger = LoggerFactory.getLogger(this.getClass());
 
